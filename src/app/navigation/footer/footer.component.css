@@ -1,13 +1,9 @@
 .footer {
     width: 100%;
-    margin: 5vh 0 0 0;
+    margin: 5vh 0 0 0 !important;
     background: #c1c2c2;
-    color: black;
-    height: 30vh;
-}
-
-.footer .row {
-    margin: 10px 0;
+    color: black; 
+    
 }
 
 .footer .container .row .col ul li {

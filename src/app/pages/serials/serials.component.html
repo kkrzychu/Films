@@ -1,1 +1,43 @@
-<p>serials works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-2">Znajdź swój serial!</h1>
+                
+                <hr class="my-4">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Znajdź</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row text-center" style="display: flex;flex-wrap:wrap;">
+
+        <div class="col-lg-3" style="margin-bottom: 1.5%;" *ngFor="let item of data">
+            <div class="border_card">
+                <img src="{{item.Poster}}" class="card-img-top">
+                <div class="film_description_card">
+                    <h5>{{ item.Title }}</h5>
+                    <p>{{ item.Year }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    
+</div>
