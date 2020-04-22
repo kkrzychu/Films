@@ -5,7 +5,11 @@
                 <h1 class="display-2">Znajdź swój film!</h1>
 
                 <hr class="my-4">
-                <a class="btn btn-primary btn-lg" role="button" >Znajdź</a>
+                <form>
+                    <input #findFilm class="form-control" type="text" placeholder="Tytuł filmu" style="width: 30%; display: inline;">
+                    <a class="btn btn-primary btn-md" style="display: inline-block; margin-bottom: 5px;" role="button" [routerLink]="['/filmy/search', findFilm.value]" (click)="findMovie(findFilm.value)">Znajdź</a>
+                </form>
+                
             </div>
         </div>
     </div>
@@ -16,13 +20,15 @@
     <div class="row text-center" style="display: flex;flex-wrap:wrap;">
 
         <div class="col-lg-3" style="margin-bottom: 1.5%;" *ngFor="let item of data">
-            <div class="border_card">
-                <img src="{{item.Poster}}" class="card-img-top">
-                <div class="film_description_card">
-                    <h5>{{ item.Title }}</h5>
-                    <p>{{ item.Year }}</p>
+            <a class="movie_link" [routerLink]="['/filmy', item.imdbID]">
+                <div class="border_card">
+                    <img src="{{item.Poster}}" class="card-img-top">
+                    <div class="film_description_card">
+                        <h5>{{ item.Title }}</h5>
+                        <p>{{ item.Year }}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 

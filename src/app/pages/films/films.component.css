@@ -27,3 +27,8 @@ h5 {
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
+
+.movie_link {
+    text-decoration: none;
+    color: black;
+}

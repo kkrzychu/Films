@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row" style="margin-top: 100px;">
+    <div class="card mb-3" style="border: none;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{ data.Poster }} " class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="lineInfo">
+              <h2 class="card-title">{{ data.Title }}</h2><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Rok: </div>
+              <h5 class="card-text">{{ data.Year }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Czas: </div>
+              <h5 class="card-text">{{ data.Runtime }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Gatunek: </div>
+              <h5 class="card-text">{{ data.Genre }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Reżyseria: </div>
+              <h5 class="card-text">{{ data.Director }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Scenariusz: </div>
+              <h5 class="card-text">{{ data.Writer }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Produkcja: </div>
+              <h5 class="card-text">{{ data.Country }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Premiera: </div>
+              <h5 class="card-text">{{ data.Released }}</h5><hr>
+            </div>
+            <div class="lineInfo">
+              <div class="labelInfo"> Nagrody: </div>
+              <h5 class="card-text">{{ data.Awards }}</h5><hr>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 50px;">
+    <div class="col">
+      <h4>OPIS FILMU</h4>
+      <p>{{ data.Plot }}</p>
+    </div>
+    <div class="col">
+      <h4>OCENY</h4>
+      <div class="rating" *ngFor="let item of data.Ratings">
+        <div>Źródło:  <h6>{{ item.Source }}</h6></div>
+        <div>Ocena: <i class="fas fa-star"> </i><h6>{{ item.Value }} </h6> </div><hr>
+      </div>
+      <div class="votes">
+        Głosy: <i class="far fa-smile">  </i> <h6 style="display: inline-block;">{{ data.imdbVotes }}</h6>
+      </div>
+      <div>
+        <hr>
+        <a href="http://imdb.com/title/{{ data.imdbID }}" target="_blank" type="button" class="btn btn-outline-dark" >IMBD</a>
+      </div>
+    </div>
+    
+  </div>
+</div>

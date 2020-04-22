@@ -15,7 +15,7 @@ export class SerialsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.WebRequest.get().subscribe((response: Movie[]) => {
+    this.WebRequest.get("").subscribe((response: Movie[]) => {
       this.data = response;
 
     });

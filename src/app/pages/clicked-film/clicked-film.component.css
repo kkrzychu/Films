@@ -1,0 +1,35 @@
+.container .row .card {
+    width: 100%;
+}
+
+.card-body {
+    height: 100%;
+}
+
+.lineInfo {
+    height: auto;
+    line-height: 50px;
+}
+
+.labelInfo {
+    width: 100px;
+    margin: 0 !important;
+    display: inline-block;
+}
+
+h5 {
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.rating h6 {
+    display: inline-block;
+}
+
+hr {
+    margin: 0 !important;
+}

@@ -13,6 +13,7 @@ import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ClickedFilmComponent } from './pages/clicked-film/clicked-film.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     RankingComponent,
     MyProfileComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ClickedFilmComponent
   ],
   imports: [
     BrowserModule,
